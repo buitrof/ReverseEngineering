@@ -1,0 +1,13 @@
+1. The config folder contains information for how to set up the database, in the config.json file and the routes that are restricted if a user is not logged in. These routes are in the isAuthenticated.js file, which is in the middleware folder. Passport.js imports the npm passport and the constructor LocalStrategy, as well as the database using sequelize, located in the index of the models folder. Passport.js exports the configured passport with the user input. 
+
+2. The models folder index takes in the seed data from the config.json file in the config folder, makes a database using sequelize, and then exports that database. The user.js file requires the bcryptjs npm and exports a function that takes in 2 inputs and creates a User.
+
+3. The public folder contains the front-end code, including the js, css, and html pages which are displayed when a user visits the site. The js uses jQuery.
+
+4. The routes folder contains the routes that can be visited by a user and also contains the api routes. This is where the databse is brought as well as the configured passport with the user information. The api routes check if a user is logged in, and the html routes send the user to the appropriate html page, depending on their log in status.
+
+5. The package.json file is used to give information to npm to identify the project and handle the different packages that are brought in. 
+
+6. The server.js file is where most of the back-end work is done. The routes are brought in, as well as the database, and everything is connected and synced. Express is brought in to set up the server.
+
+7. The README.md describes the project.
